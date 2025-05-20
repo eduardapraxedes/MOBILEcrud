@@ -1,0 +1,8 @@
+{
+
+  "scripts": {
+    
+    "start": "Json-server --watch db.json --port 3001"
+  }
+ 
+}
