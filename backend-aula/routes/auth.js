@@ -15,6 +15,11 @@ const JWT_SECRET = 'chave-secreta-super-segura';
 
 // Exporta uma função que recebe a conexão do banco
 module.exports = (db) => {
+    // rota para login
+    router.get('/', (req, res) => {
+        //retorna mensagem orientando usar POST
+        res.status(405).json({message: 'Método não permitido. Use POST para /api/auth/login com JSON contendo email e password.'})
+    });
     // Rota GET para /api/auth/login (para evitar erro no navegador)
     router.get('/login', (req, res) => {
         // Retorna mensagem orientando usar POST
